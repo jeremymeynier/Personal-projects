@@ -1,84 +1,90 @@
 import numpy as np
 import itertools as it
 
-def appartient_liste_trie(nombre, liste):
+
+def belongs_sort_list(number, list_):
     # marche si liste triée
-    indice_min, indice_max = (0, len(liste) - 1)
-    if nombre == liste[indice_min] or nombre == liste[indice_max]:
+    index_min, index_max = (0, len(list_) - 1)
+    if number == list_[index_min] or number == list_[index_max]:
         return True
-    if nombre < liste[indice_min] or nombre > liste[indice_max]:
+    if number < list_[index_min] or number > list_[index_max]:
             return False
-    while indice_max - indice_min > 1  :
-        indice_int = (indice_min + indice_max) // 2
-        if nombre < liste[indice_int]:
-            indice_max = indice_int
-        elif nombre > liste[indice_int]:
-            indice_min = indice_int
+    while index_max - index_min > 1:
+        indice_int = (index_min + index_max) // 2
+        if number < list_[indice_int]:
+            index_max = indice_int
+        elif number > list_[indice_int]:
+            index_min = indice_int
         else:
             return True
     return False
 
+
 # nombre = somme de 2 nombres?
-def somme_2_nombres(nombre, liste):
-    longueur = len(liste)
+def sum_2_numbers(number, list_):
+    length = len(list_)
     ppn = 0
-    while nombre > liste[ppn] and ppn < longueur - 1:
+    while number > list_[ppn] and ppn < length - 1:
         ppn += 1
-    STOP = False
+    stop = False
     resultat = False
     j = 0
-    while not STOP:
-        a = liste[j]
-        b = liste[ppn]
-        if nombre == a + b:
-            STOP = True
+    while not stop:
+        a = list_[j]
+        b = list_[ppn]
+        if number == a + b:
+            stop = True
             resultat = True
-        elif nombre > a + b:
+        elif number > a + b:
             j += 1
         else:
             ppn -= 1
         if ppn < j:
-            STOP = True
+            stop = True
     return resultat
 
-#Détermination nombre premiers jusqu'à n
-def nombres_premiers(n):
-    j = 1
+
+# Détermination nombre premiers jusqu'à n
+def prime_number(n):
     if n < 2:
         return []
-    L =[2]
+    prime_numbers_list = [2]
     for i in range(3, n+1):
         a = 0
         longueur = 0
-        while L[longueur] <= np.sqrt(i) and a == 0:
-            if i % L[longueur] == 0:
+        while prime_numbers_list[longueur] <= np.sqrt(i) and a == 0:
+            if i % prime_numbers_list[longueur] == 0:
                 a = 1
             longueur += 1
         if a == 0:
-            L.append(i)
-    return np.array(L)
+            prime_numbers_list.append(i)
+    return np.array(prime_numbers_list)
 
-def diviseurs(n):
-    #algo linéaire non optimisé
+
+# linear algorithm non optimized
+def dividor_list(n):
     if n % 2 == 1:
-        L = [i for i in range(1, n // 2 + 1, 2) if n % i == 0]
+        dividors_list = [i for i in range(1, n // 2 + 1, 2) if n % i == 0]
     else:
-        L = [i for i in range(1, n // 2 + 1) if n % i == 0]
-    L.append(n)
-    return L
+        dividors_list = [i for i in range(1, n // 2 + 1) if n % i == 0]
+    dividors_list.append(n)
+    return dividors_list
 
-# Détermination des diviseurs de n et de son nombre. Effet de bord attention
-def diviseurs_bis_nombre_diviseur(n):
+
+def dividor_bis_number_dividors(n, only_numbers=False, prime_number_list=False):
+    # list of dividors of n, and its length
     if n <= 3:
         dico = {n: 1}
     else:
-    # à finir, actuellement bien plus lent que le premier
-        liste = nombres_premiers(int(np.sqrt(n)))
+        if prime_number_list is not None:
+            list_ = prime_number_list
+        else:
+            list_ = prime_number(int(np.sqrt(n)))
         dico = {}
         i = 0
-        a = liste[i]
-        while n >= a and i < len(liste):
-            a = liste[i]
+        a = list_[i]
+        while n >= a and i < len(list_):
+            a = list_[i]
             while n % a == 0:
                 if a in dico:
                     dico[a] += 1
@@ -88,11 +94,18 @@ def diviseurs_bis_nombre_diviseur(n):
             i += 1
         if n > 1:
             dico[n] = 1
-    diviseurs = []
-    for key, value in dico.items():
-        diviseurs.append(tuple(key ** i for i in range(value + 1)))
+    if only_numbers:
+        number_dividors = 1
+        for power in dico.values():
+            number_dividors *= (power + 1)
+        return number_dividors
 
-    return [np.product(d) for d in it.product(*diviseurs)]
+    dividors_list = []
+    for prime_dividor, max_power in dico.items():
+        # list of tuple for each prime dividor, [(1, 3, 9), (1, 5)] for {3 : 2, 5 : 1}
+        dividors_list.append(tuple(prime_dividor ** i for i in range(max_power + 1)))
+    result = [np.product(d) for d in it.product(*dividors_list)]
+    return result, len(result)
 
 
 def factoriel(n):
@@ -100,4 +113,3 @@ def factoriel(n):
         return n * factoriel(n - 1)
     else:
         return 1
-
