@@ -10,11 +10,11 @@ def belongs_sort_list(number, list_):
     if number < list_[index_min] or number > list_[index_max]:
             return False
     while index_max - index_min > 1:
-        indice_int = (index_min + index_max) // 2
-        if number < list_[indice_int]:
-            index_max = indice_int
-        elif number > list_[indice_int]:
-            index_min = indice_int
+        index_int = (index_min + index_max) // 2
+        if number < list_[index_int]:
+            index_max = index_int
+        elif number > list_[index_int]:
+            index_min = index_int
         else:
             return True
     return False
@@ -44,7 +44,7 @@ def sum_2_numbers(number, list_):
     return resultat
 
 
-# Détermination nombre premiers jusqu'à n
+# List of prime numbers until n
 def prime_number(n):
     if n < 2:
         return []
