@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+% -----------------------------------------------------------------
+\title{Matrices}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Soit $u$ défini par $\forall P\in\mathbb R_3[X],\: u(P) = P' + P$.
+\begin{enumerate}
+\item Écrire la matrice de $u$ dans la base $\beta=(1,X,X^2,X^3)$.
+\item L'endomorphisme est-il inversible? Si oui donner la matrice de $u^{-1}$ dans la base canonique
+\end{enumerate} 
+
+\section*{Exercice 2}
+
+Montrer que 2 matrices de $\textit{M}_n(\mathbb{R})$ semblables dans $\textit{M}_n(\mathbb{C})$ sont semblables dans $\textit{M}_n(\mathbb{R})$ 
+
+\section*{Exercice 3}
+
+Soit $A=(a_{ij})\in \textit{M}_n(\mathbb{C})$ tel que $ \forall i\in  \llbracket 1,n \rrbracket, |a_{ij}| > \sum_{j\ne i} |a_{ij}|$. Montrer que $A \in GL_n(\mathbb{C})$
+
+\section*{Exercice 4}
+
+Soit $A \in GL_n(\mathbb{R})$ tel que $A + A^{-1} = I_n.$ Calculer $A^k + A^{-k}$ pour $k\in\mathbb{N}$
+
+\section*{Exercice 5}
+
+Soit $f$ un élément non nul de $\emph{L}(\mathbb{R}^3)$ vérifiant $f^3 + f = 0$. Montrer que $\mathbb{R}^3=Im(f)\oplus Ker(f)$ et que l'on peut trouver une base dans laquelle $f$ a pour matrice $A = \begin{pmatrix} 
+0 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & -1 & 0
+\end{pmatrix} $
+
+
+
+\section*{Exercice 6}
+
+Soit $A \in M_{3,2}(\mathbb{R})$ et $B \in M_{2,3}(\mathbb{R})$ tel que $AB= \begin{pmatrix}
+0 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}$. Trouver $BA$
+
+\end{document}

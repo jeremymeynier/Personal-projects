@@ -1,0 +1,117 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+% -----------------------------------------------------------------
+\title{Espaces euclidiens}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Soit $E$ un espace euclidien et $ f : E \mapsto E$ une application vérifiant $f(0)=0$ et, $\forall (x,y)\in E^2,\: ||f(x) - f(y)|| = ||x-y||$ 
+
+\begin{enumerate}
+\item Montrer que $ \forall x\in E, ||f(x)||=||x||$
+\item Montrer que $ \forall x\in E, f(-x)=-f(x)$
+\item Montrer que $ \forall (x,y)\in E^2
+, <f(x),f(y)>\, =\, <x,y>$
+\item Soit $ \beta=(e_1,\dots,e_n)$ une base orthonormée de $E$. Montrer que $\forall x\in E,\\ f(x) = \sum_{k=1}^n <e_k,x>f(e_k)$
+\item En déduire que $f$ est un automorphisme orthogonal de $E$
+
+\end{enumerate}
+
+
+\section*{Exercice 2}
+
+Dans $\mathbb{R}^4$ muni de sa structure euclidienne canonique, on donne F :
+$ \left\{
+\begin{array}{l}
+  x + y + z + t =0 \\
+  x + 2y + 3z + 4t =0 \\
+\end{array}
+\right.$
+\begin{enumerate}
+\item Déterminer une baser orthonormée de $F$.
+\item Donner la matrice dans $\mathbb{R}^4$ de la projection orthogonale de $p_F$ sur $F$.
+\item Calculer $d(u,F)$ où $u=(1,1,1,1)$
+\end{enumerate}
+
+\section*{Exercice 3}
+
+Soit $E$ un espace euclien, $E_1$ et $E_2$ deux sous-espaces de $E$. Montrer que $ (E_1 + E_2)^{\perp}= E_1^{\perp}\cap E_2^{\perp}$ et $(E_1\cap E_2)^{\perp} = E_1^{\perp} + E_2^{\perp}$
+
+\section*{Exercice 4}
+
+Déterminer $I = \inf_{ (a,b)\in\mathbb{R}^2}\left\{ \int_0^1 (t^3 -at-b)^2 \mathrm{d}t \right\}$
+
+\section*{Exercice 5}
+
+Montrer que $<A,B> \; = \operatorname{Tr}(A^{T}B)$ est un produit scalaire sur $\textit{M}_n(\mathbb{R})$, puis déterminer $\\\inf_{(a,b)\in\mathbb{R}^2} \left\{||M-aI-bJ||^2\right\}$ avec $J = \begin{pmatrix}
+1 & \dots & 1\\
+\vdots & \ddots & \vdots\\
+1 & \dots & 1 
+\end{pmatrix}$
+
+\section*{Exercice 6}
+
+Soient $(E,<,>)$ un espace euclidien et $a\in E$ tel que $||a||=1$. Si $\alpha\in\mathbb{R}$, on pose $\\ f_{\alpha}(x) = x + \alpha<a,x>a$
+
+\begin{enumerate}
+
+\item Soient $(\alpha,\beta)\in\mathbb{R}^2$. Calculer $f_\alpha\circ f_\beta$. Pour quels $\alpha$ $f_\alpha$ est-il bijectif?
+\item Soit $\alpha\in\mathbb{R}$. Déterminer les éléments propres de $f_{\alpha}$
+\item Pour quels $\alpha$ $f_\alpha$ est-il un automorphisme orthogonal de $E$?
+\item Pour quels $\alpha$ $f_\alpha$ est-il un endomorphisme symétrique de $E$?
+\end{enumerate}
+
+\section*{Exercice 7}
+
+Soit $u$ un endomorphisme symétrique d'un espace euclidien $E$ de valeurs propres $\lambda_1,\dots,\lambda_n$ comptées avec multiplicité et rangées en ordre croissant.
+
+Montrer que $ \forall x\in E$, $\lambda_1||x||^2\leqslant \; <u(x),x>\;\leqslant  \lambda_n ||x||^2$  
+
+\section*{Exercice 8}
+
+Soit $A\in \textit{M}_n(\mathbb{R}
+)$. Montrer que la matrice $A^{T}A$ est diagonalisable à valeurs propres positives
+
+\end{document}

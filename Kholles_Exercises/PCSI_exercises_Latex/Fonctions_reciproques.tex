@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+
+% -----------------------------------------------------------------
+\title{Fonctions réciproques}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Calculer $\arctan(2) + \arctan(5) + \arctan(8)$
+
+\section*{Exercice 2}
+
+Résoudre $2\arcsin(x)=\arcsin(2x\sqrt{1-x^2})$
+
+\section*{Exercice 3}
+\begin{enumerate}
+\item Montrer que la fonction $f:\begin{cases}
+ [\frac{\pi}{2},\pi[\mapsto[1,+\infty[\\
+ \quad\;\; x\mapsto\frac{1}{\sin(x)}
+ \end{cases}$ induit une bijection
+\item Exprimer sa réciproque
+ 
+\end{enumerate}
+
+\section*{Exercice 4}
+
+Résoudre $\arcsin(2x) = \arcsin(x) + \arcsin(x\sqrt{2})$
+
+\section*{Exercice 5}
+
+Calculer $4\arctan(\frac{1}{5})-\arctan(\frac{1}{239})$
+
+\section*{Exercice 6}
+
+Pour $x\geq0$ et $y\geq0$ montrer que $\arctan(x)-\arctan(y) = \arctan(\frac{x-y}{1+xy})$
+
+
+
+\end{document}

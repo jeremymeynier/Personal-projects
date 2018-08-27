@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+
+% -----------------------------------------------------------------
+\title{Déterminants}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+ 
+Calculer $\begin{vmatrix}
+b & a & \dots & a\\
+a & \ddots & \ddots & \vdots\\
+\vdots & \ddots & \ddots & a\\
+a & \dots & a & b
+\end{vmatrix}$
+
+\section*{Exercice 2}
+
+$\forall n\in \mathbb{N}^*$, calculer le déterminant $D_n$ de la matrice de terme fénéral $|i-j|$, $1\leq i,j \leq n$ 
+
+\section*{Exercice 3}
+
+Calculer $D_n = \begin{vmatrix}
+1 &  \cdots & 1\\
+\vdots & \ddots & (0)\\
+1 & (0) & 1\\
+\end{vmatrix}$
+
+\section*{Exercice 4}
+
+Exprimer $D_n = \begin{vmatrix}
+2 & 1 & \cdots & 1\\
+1 & 3 & \ddots &  \vdots\\
+\vdots & \ddots & \ddots & 1\\
+1 & \cdots & 1 & n+1
+\end{vmatrix}$ en fonction de $H_n=\sum_{k=1}^n \frac{1}{k}$.
+
+\section*{Exercice 5}
+
+\begin{enumerate}
+\item Calculer $ \begin{vmatrix}
+a & b & c \\
+a^2 & b^2 & c^2 \\
+a^3 & b^3 & c^3 \\
+\end{vmatrix}$
+\item En déduire $ \begin{vmatrix}
+a+b & b+c & c+a \\
+a^2+b^2 & b^2+c^2 & c^2+a^2 \\
+a^3+b^3 & b^3+c^3 & c^3+a^3 \\
+\end{vmatrix}$
+\end{enumerate}
+
+\section*{Exercice 6}
+
+Soient $A,B\in M_n(\mathbb{R})$. Montrer que $U = \begin{vmatrix}
+A & B\\
+B & A\\
+\end{vmatrix} = \det(A+B)\det(A-B)$.
+
+\section*{Exercice 7}
+
+Soit $H\in M_n(\mathbb{R})$ de rang 1. Montrer que $\det(A+H)\det(A-H)\leq \det(A^2)$
+
+
+
+
+
+\end{document}

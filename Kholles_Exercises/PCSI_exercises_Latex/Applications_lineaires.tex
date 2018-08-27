@@ -1,0 +1,136 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+
+% -----------------------------------------------------------------
+\title{Applications linéaires}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Soit $E$ un espace vectoriel de dimension finie, et $u$ et $v$ deux endomorphismes de $E$. Montrer que $|\operatorname{rg}(u)-\operatorname{rg}(v)|\leq \operatorname{rg}(u+v) \leq \operatorname{rg}(u)+\operatorname{rg}(v)$
+
+\section*{Exercice 2}
+
+Soit $E$ un $\mathbb{K}$-ev, $f$ et $g$ deux endomorphismes de $E$ tel que $f\circ g =id$
+\begin{enumerate}
+\item Démontrer que $\operatorname{Ker}(g\circ f) =\operatorname{Ker}(f)$
+\item  Démontrer que $\operatorname{Im}(g\circ f) =\operatorname{Im}(g)$
+\item Démontrer que $E = \operatorname{Ker}(f)\oplus \operatorname{Im}(g)$
+\end{enumerate}
+
+\section*{Exercice 3}
+
+Soit $f$ un endomorphisme d'un espace vectoriel $E$ de dimension $n$.
+
+\begin{enumerate}
+\item Démontrer que $E = \operatorname{Ker}(f)\oplus \operatorname{Im}(f) \Rightarrow \operatorname{Im}(f) = \operatorname{Im}(f^2)$
+\item
+\begin{enumerate}
+\item Démontrer que $\operatorname{Im}(f) = \operatorname{Im}(f^2) \Leftrightarrow \operatorname{Ker}(f) = \operatorname{Ker}(f^2)$
+\item En déduire $\operatorname{Im}(f) = \operatorname{Im}(f^2) \Leftrightarrow E = \operatorname{Ker}(f)\oplus \operatorname{Im}(f)$
+\end{enumerate}
+
+\end{enumerate}
+
+\section*{Exercice 4}
+
+Soit $E$ un $\mathbb{K}$ espace vectoriel de dimension $n\geq 1$ et $f$ un endomorphisme nilpotent d'indice $p$ ($f^p=0$, $f^{p-1}\neq 0)$
+\begin{enumerate}
+\item Montrer que $\exists x\in E$ tel que $(x,f(x),f^2(x),\cdots,f^{p-1}(x))$ soit libre.
+\item En déduire $f^n = 0$
+\end{enumerate}
+
+\section*{Exercice 5}
+
+Soit $E$ un $\mathbb{K}$ espace vectoriel de dimension finie $n$, et $f$ un endomorphisme de $E$. Montrer que $Ker(f)=Im(f) \Leftrightarrow f^2=0$ et $n=2\operatorname{rg}(f)$
+
+\section*{Exercice 6}
+
+Soit $E =Im(u) +Im(v) = Ker(u)+Ker(v)$, $E$ de dimension finie $n$.
+Montrer que $Im(u)$ et $Im(v)$ sont supplémentaires dans $E$, tout comme $Ker(u)$ et $Ker(v)$.
+
+\section*{Exercice 7}
+
+Soient $E,F,G$ trois $\mathbb{K}$ espaces vectoriels, et $u\in L(E,F)$, $v\in L(F,G)$ et $w=v\circ u$.
+Montrer que $w$ est un isomorphisme $\Leftrightarrow u$ est injective, $v$ est surjective et $Im(u)\oplus Ker(v)=F$
+
+\section*{Exercice 8}
+
+Soit $E$ un $\mathbb{K}$ espace vectoriel, $f\in L(E)$, $p$ un projecteur. Montrer $p\circ f = f\circ p \Leftrightarrow Im(p)$ et $Ker(p)$ sont stables par $f$
+
+\section*{Exercice 9}
+
+Soit $E$ un $\mathbb{K}$ espace vectoriel de dimension $n$, $u,v\in L(E)$. Montrer que $\operatorname{rg}(u) + \operatorname{rg}(v)-n\leq 
+\operatorname{rg}(u\circ v) \leq \min(\operatorname{rg}(u),\operatorname{rg}(v))$
+
+\section*{Exercice 10}
+
+
+Soit $f:\begin{cases}
+\mathbb{R}_n[X] & \to \mathbb{R}^{n+1} \\
+P &\to (P(1),P'(1),\cdots,P^{(n)}(1))
+\end{cases}$
+
+Montrer qu'il s'agit d'un isomorphisme.
+
+\section*{Exercice 11}
+
+Soit $E$ un $\mathbb{K}$ espace vectoriel, $p$ et $q$ deux projecteurs de $E$
+\begin{enumerate}
+\item Montrer que $Im(p)=Im(q)\Leftrightarrow p\circ q = q$ et $q\circ p =p$
+\item Donner une condition nécessaire et suffisante pour que $Ker(p)=Ker(q)$
+\item Montrer que $p+q$ est un projecteur $\Leftrightarrow p\circ q= q\circ p = 0$
+\item Montrer alors, si $p+q$ est un projecteur, que $Im(p+q)=Im(p)\oplus Im(q)$ et $Ker(p+q)=Ker(p)\cap Ker(q)$
+\end{enumerate}
+
+\section*{Exercice 12}
+
+Soit $E$ un $\mathbb{K}$ espace vectoriel et $f\in L(E)$ vérifiant $f^2-5f+6Id_E=0$. Montrer que $Ker(f-2Id)\oplus Ker(f-3Id)=E$
+
+\section*{Exercice 13}
+
+Soit $E$ un espace vectoriel de dimension finie, $p,q\in L(E)$ tel que $p+q=Id$ et $\operatorname{rg}(p)+\operatorname{rg}(q)\leq \dim(E)$. Montrer que $p$ et $q$ sont des projecteurs.
+
+\end{document}

@@ -1,0 +1,114 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+% -----------------------------------------------------------------
+\title{Suites et series de fonctions}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Étudier les convergences (simples, uniformes, normales) des suites et séries de fonctions $(f_n)_{n\in\mathbb{N}}$ suivantes:
+
+\begin{enumerate}
+\item $ f_n(x)=\frac{nx^2}{1+nx}$, $I=[0,1]$
+\item $ f_n(x)=x^2 e^{-nx}$, $I=\mathbb{R^{+}}$
+\item $ f_n(x)= n\ln(1+\frac{1}{nx})$, $I=]0,+\infty[$
+
+\end{enumerate}
+
+\section*{Exercice 2}
+
+Étudier les convergences (simples, uniformes, normales) des séries de fonctions suivantes
+
+\begin{enumerate}
+\item $\sum_{n\geq1} x^n\ln^2(x)$
+\item $\sum_{n\geq1} x^n\ln(x)$
+\end{enumerate}
+
+\section*{Exercice 3}
+
+Soit $f_n(x)=\frac{\sin(nx)}{1+n^2x^2}$
+
+\begin{enumerate}
+\item Étudier les convergences de $f_n$
+\item Montrer que $\forall a>0 \;\sum f_n$ converge normalement sur $[a, +\infty[$
+\item Montrer que $ \sum f_n$ ne converge pas normalement sur $]0, +\infty[$
+\end{enumerate}
+
+\section*{Exercice 4}
+
+Soit $f_n(x)=\frac{x}{(1+x^2)^n}$. Étudier les convergences de $(f_n)_{n\geq1}$, puis de $\sum_{n\geq1} f_n$
+
+\section*{Exercice 5}
+
+Soit $(f_n)_{n\in\mathbb{N^*}}$ définie sur $[0,2]$ par $f_n(x)=n^2x(1-x)^n$.
+
+\begin{enumerate}
+\item Étudier les variations de $f_n$ sur $[0,2]$
+\item Calculer $\lim_{n\to +\infty} \int_0^1 f_n(x)\mathrm{d}x$
+\item Étudier les convergences de la suite $(f_n)_{n\in\mathbb{N^*}}$ sur $[0,1]$
+\item Montrer que $\forall a\in ]0,1[$,
+ la suite $(f_n)_{n\in\mathbb{N^*}}$ converge uniformément sur $[a,2-a]$
+\end{enumerate}
+
+\section*{Exercice 6}
+
+Soit $\phi(x) = \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n^x}$
+\begin{enumerate}
+\item Montrer que $\phi$ converge uniformément sur tout segment de $]0,+\infty[$
+\item Montrer que $\phi$ est continue sur $]0,+\infty[$
+\item Montrer que $\phi$ ne converge pas uniformément sur $]0,+\infty[$
+\end{enumerate}
+
+\section*{Exercice 7}
+
+soit $\zeta(x)=\sum_{n=1}^{+\infty} \frac{1}{n^x}$
+\begin{enumerate}
+\item Donner le domaine de définition de $\zeta$
+\item Étudier la convergence normale et la converge uniforme de $\zeta$
+\item Montrer que $\zeta\in C^0(]1,+\infty[)$
+\item Déterminer un équivalent de $\zeta$ en $1^{+}$
+\item Déterminer la limite de $\zeta$ en $+\infty$
+\end{enumerate}
+
+\end{document}

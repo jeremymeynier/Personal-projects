@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+
+% -----------------------------------------------------------------
+\title{Suites numériques}
+\begin{document}
+\maketitle
+
+
+\section*{Exercice 1}
+
+\begin{enumerate}
+
+\item Déterminer $u_n /\; u_{n+1}=4u_n +3$ en fonction de $u_0$
+\item Résoudre $u_{n+2}+4u_{n+1}+4u_n=0$
+\item Résoudre $u_{n+2}+2u_{n+1}-3u_n=0$
+\item Résoudre $u_{n+2}+u_{n+1}+u_n=0$
+\end{enumerate}
+
+\section*{Exercice 2}
+
+Démontrer le théorème de Césaro: si $\lim_{n\to\infty} u_n= l$ alors $\lim_{n\to\infty} v_n=\frac{u_0+u_1+\dots+u_n}{n+1}=l$ 
+
+\section*{Exercice 3}
+
+Étudier la suite $(u_n)$ définie par 
+$\begin{cases}
+u_0=\frac{\pi}{2}\\
+u_{n+1}=\sin(u_n)
+\end{cases}$
+
+\section*{Exercice 4}
+
+Soit $a>0$, on considère $P_n : x  \mapsto x^n + x^{n-1}+\cdots + x - a$
+
+\begin{enumerate}
+
+\item Montrer que $P_n$ a une seule racine strictement positive, que l'on note $U_n$.
+\item Montrer que $(U_n)$ est décroissante.
+\item Montrer que $(U_n)$ converge et calculer sa limite en fonction de $a$
+\end{enumerate}
+
+\section*{Exercice 5}
+
+Soit $I_n =\int_0^{\frac{\pi}{2}} \sin^n(t)$
+
+\begin{enumerate}
+\item Montrer que $I_n =\int_0^{\frac{\pi}{2}} \cos^n(t)$, et $I_n>0$
+\item Montrer que $\forall n\in \mathbb{N}$, $I_{n+2}=\frac{n+1}{n+2}I_n$
+\item Exprimer $I_n$ à l'aide de factoriels pour $n=2p$ et $n=2p+1$
+\item Montrer que $(n+1)I_{n}I_{n+1}=\frac{\pi}{2}$ et $I_{n+2}\leq I_{n+1}\leq I_{n}$
+\item Déterminer un équivalent de $I_n$
+\end{enumerate}
+
+
+
+
+
+
+
+\end{document}

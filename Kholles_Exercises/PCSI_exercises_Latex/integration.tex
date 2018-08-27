@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+
+% -----------------------------------------------------------------
+\title{Int\'egration}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Donner une primitive des fonctions suivantes:
+\vspace{2ex}
+
+\begin{enumerate}
+
+
+\item $f(t)=t\arctan^2(t)$
+
+\item $ f(t)=\frac{t+1}{(t-1)^2} $
+
+\item $ f(t) = \frac{1}{\cos(t)+\sin(t)} $
+
+\item $ f(t) = \frac{\cos(t)}{\cos(t)+\sin(t)} $
+\end{enumerate}
+
+
+\section*{Exercice 2}
+
+Soit $f\in C^0([0,1],\mathbb{R})$. On définit $F:[0,1]\mapsto\mathbb{R}$ par $F(x)=\int_{0}^{1} \min(x,t)f(t)\, \mathrm{d}t$. Montrer que $F$ est $C^2$ et calculer $F^{(2)}(x)$
+
+\section*{Exercice 3}
+
+Déterminer la limite de la suite de terme général $u_n=\frac{1}{n^{p+1}}\sum_{k=1}^{n}k^p$
+
+
+\end{document}

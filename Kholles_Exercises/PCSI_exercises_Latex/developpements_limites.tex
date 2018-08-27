@@ -1,0 +1,98 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+
+% -----------------------------------------------------------------
+\title{Développements limités}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Donner le développement limité à l'ordre $3$ au voisinage de $3$ de $g(x)=\sqrt{1+x}$
+
+\section*{Exercice 2}
+
+Donner le développement limité à l'ordre $5$ en $0$ de $f(x)=\exp(\tan(x))$
+
+\section*{Exercice 3}
+
+Soit $f(x)=\frac{1}{x^2}(\frac{\ln(1+x)+\ln(1-x)}{x^2}+1)$. Déterminer $\lim_{x\to0} f(x)$
+
+\section*{Exercice 4}
+
+Déterminer le développement asymptotique à l'ordre $4$ de $\ln(x+\sqrt{1+x^2})$
+
+\section*{Exercice 5}
+\begin{enumerate}
+\item Montrer qu'il existe $x_n\in ]n\pi -\frac{\pi}{2}, n\pi +\frac{\pi}{2}[$ tel que $\tan(x_n)=x_n$
+\item Donner un développement asymptotique à $3$ termes de $x_n$
+\end{enumerate}
+
+\section*{Exercice 6}
+
+Soit $f:x\in\mathbb{R}^{+*} \mapsto x-\ln(x)$
+
+\begin{enumerate}
+\item Soit $n\geq2$. Montrer $f(x)=n$ possède $2$ solutions $u_n$ et $v_n$ avec $u_n\in]0,1[$ et $v_n\in ]1,+\infty[$
+\item Montrer que $v_n= n+\ln(n)+\frac{\ln(n)}{n} + o(\frac{\ln(n)}{n})$
+\item Montrer que $u_n= e^{-n} + e^{-2n} +o(e^{-2n})$
+\end{enumerate}
+
+\section*{Exercice 7}
+
+Soit $f(x)=e^x +x$
+\begin{enumerate}
+\item Montrer que $\forall n\in\mathbb{N}^{*} \; f(x)=n$ possède une unique solution sur $\mathbb{R}^{+}$, que l'on nomme $u_n$
+\item Donner un développement asymptotique à $2$ termes de $u_n$
+\end{enumerate}
+
+\section*{Exercice 8}
+
+Soit $u_n=\sqrt{n+\sqrt{n-1+\sqrt{\dots\sqrt{1+\sqrt{0}}}}}$
+\begin{enumerate}
+\item Expliciter une relation entre $u_n$ et $u_{n-1}$
+\item Faire un développement limité à l'ordre $3$ de $u_n$
+\end{enumerate}
+
+\end{document}

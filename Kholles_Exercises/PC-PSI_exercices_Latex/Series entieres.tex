@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+% -----------------------------------------------------------------
+\title{Séries entières}
+\begin{document}
+\maketitle
+
+
+\section*{Exercice 1}
+
+Trouver le rayon de convergence $R$ de $\sum_{n\geq1} \frac{\sinh(n)}{n(n+1)}x^n$, puis calculer la somme pour $x\in ]-R,R[$
+
+\section*{Exercice 2}
+
+Soit $f(x) = \sum_{n=0}^\infty n^{(-1)^n}x^n$. Calculer le rayon de convergence et la somme sur le bon intervalle.
+
+\section*{Exercice 3}
+
+Soit $S(x) = \sum_{p=0}^\infty \frac{x^{3p}}{(3p)!} $. Donner l'ensemble de définition de $S$ et l'exprimer à l'aide de fonctions usuelles.
+
+\section*{Exercice 4}
+
+Déterminer le rayon de convergence des séries entières suivantes :
+
+\begin{enumerate}
+\item $\sum e^{-n}z^{2n}$
+\item $\sum \sin(n)z^{n}$
+\item $\sum z^{n^2}$
+\item $\sum a_n z^{n}$ avec $a_{n+1}=a_n + \frac{2}{n+1}a_{n-1}$ et $ a_0=a_1=1$
+\end{enumerate}
+
+\section*{Exercice 5}
+
+Déterminer le développement en séries entières en $0$ des fonctions suivantes:
+
+\begin{enumerate}
+\item $f(x) = \ln(x^2 +x +1)$
+\item $f(x)= \ln(x^2 -5x +6)$
+\item $f(x) = \frac{2x-1}{(2+x-x^2)^2}$
+\end{enumerate}
+
+
+\section*{Exercice 6}
+
+Soit $f$ définie sur $]-1,1[$ par $f(x)=\frac{\arcsin(x)}{\sqrt{1-x^2}}$
+
+\begin{enumerate}
+\item Montrer que $f$ est développable en série entière sur $]-1,1[$
+\item Montrer que $f$ est solution de $(1-x^2)y' - xy=1$
+\item En déduire le développement en série entière de $f$ sur $]-1,1[$
+\end{enumerate}
+
+
+\end{document}

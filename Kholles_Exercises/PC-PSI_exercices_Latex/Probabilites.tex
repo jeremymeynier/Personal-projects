@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}
+\usepackage{dsfont} 
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+% -----------------------------------------------------------------
+\title{Probabilités}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Soient $X$ et $Y$ deux variables aléatoires réelles indépendantes, de lois binomiales $B(n,p)$ et $B(m,p)$ respectivement. On pose $S=X+Y$. Calculer $\mathrm{P}(X=x|S=s)$
+
+\section*{Exercice 2}
+
+Lors d'une rencontre d'athlétisme, la barre est montée d'un cran après chaque saut réussi par le concurrent. Quand un saut est raté, la compétition d'arrête pour le sauteur. Celui-là a, pour le saut $n$, une chance sur $n$ de réussir le saut. On appelle $X$ le rang du dernier saut réussi. 
+
+\begin{enumerate}
+\item Quelle est la loi de $X$?
+\item Vérifier qu'il s'agit d'une variable aléatoire
+\item Calculer l'espérance et la variance de $X$ 
+\end{enumerate}
+
+\section*{Exercice 3}
+
+Soit $\lambda>0, a>0$ et $a\neq1$. On suppose que $(X,Y)$ a une loi de probabilité définie par $\mathrm{P}(X=i\cap Y=j)=\frac{\lambda a^i}{j!},\; 0\leq i\leq j$
+
+\begin{enumerate}
+\item Déterminer la loi de $Y$
+\item Déterminer $\lambda$ pour qu'il s'agisse bien d'une loi de couples.
+\item $X$ et $Y$ sont-elles indépendantes?
+\end{enumerate}
+~
+\section*{Exercice 4}
+
+Soient $X$ et $Y$ deux variables aléatoires réelles indépendantes. $Y\sim P(\lambda), X$ suit une loi uniforme sur $\{1,2\}$, et $Z=XY$.
+
+\begin{enumerate}
+\item Déterminer la loi de $Z$
+\item Calculer $\mathbb{E}(Z)$ et $\operatorname{Var}(Z)$
+\item Calculer la probabilité que $Z$ soit paire
+\end{enumerate}
+
+\section*{Exercice 5}
+
+Soient $X$ et $Y$ deux variables aléatoires réelles indépendantes suivant une loi géométrique de paramètres respectifs $a$ et $b$, et $Z=Y-X$. 
+
+\begin{enumerate}
+\item Trouver la loi de $Z$
+\item Calculer $\mathrm{P}(X\leq Y)$
+\end{enumerate}
+
+\section*{Exercice 6}
+
+On lance une pièce équilibrée consécutivement. On s'arrête dès que deux piles successifs sont apparus. $X$ est le nombre de lancers jusqu'à l'arrêt. Trouver la loi de $X$
+
+\section*{Exercice 7}
+
+Soient $X$, $Y$ des variables aléatoires indépendantes suivant une loi de Poisson de paramètre $\lambda \in \mathbb{R}^{+*}$.
+
+\begin{enumerate}
+\item Déterminer la fonction génératrice de $X$ et $3Y$
+\item En déduire la fonction génératrice de $Z = X + 3Y$
+\item En déduire $\mathbb{E}(Z)$ et $\mathbb{V}(Z)$
+\item $X$ et $Z$ sont-elles indépendantes? Donner alors le coefficient de correlation linéraire $\rho(X,Z)$
+\item Montrer que la loi de $Z$ s'écrit $\mathbb{P}(Z = n) = A_ne^{-2\lambda}$ avec $A_n$ ne faisant pas intervenir d'exponentielle.
+\item Trouver le minimum de $f(t) = \mathbb{V}(X + tZ)$
+\end{enumerate}
+
+\section*{Exercice 8}
+
+Un point $M$ se déplace dans un plan muni d'un repère$(O,\vec{i},\vec{j}$. Au départ, $M$ est au point $O$. À chaque instant il se déplace d'un pas dans l'une des quatres directions $(\vec{i},\vec{-i},\vec{j},\vec{-j})$. Ses coordonnées après $n$ déplacements sont des variables aléatoires réelles $X_n,Y_n$.
+
+\begin{enumerate}
+\item Calculer $\mathbb{P}(X_n=n),\mathbb{P}(Y_n=n),\mathbb{P}(Y_n=n\cap X_n=n)$. $X_n$ et $Y_n$ sont-elles indépendantes?
+\item Trouver une relation entre $\mathbb{E}(X_{n+1}^2)$ et $\mathbb{E}(X_n^2)$. Calculer $\mathbb{E}(X_n^2)$.
+\item Calculer $\mathbb{P}(Y_n=0\cap X_n=0)$
+\end{enumerate}
+
+
+\end{document}

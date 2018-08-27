@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+
+% -----------------------------------------------------------------
+\title{Complexes}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Prouver à l'aide des complexes que $\cos(p) +\cos(q)=2\cos(\frac{p+q}{2})\cos(\frac{p-q}{2})$
+
+\section*{Exercice 2}
+
+Linéarisation et calcul de $\sum_{k=0}^n \cos(kt)$
+
+\section*{Exercice 3}
+
+Trouver les $z\in\mathbb{C}$ tel que $z^2=3+i$
+
+\section*{Exercice 4}
+
+Trouver les $z/in\mathbb{C}$ tel que $(z+i)^n=(z-i)^n$
+
+\section*{Exercice 5}
+
+Soit $f(z)=\frac{z+1}{z-i}$.
+
+\begin{enumerate}
+\item Donner l'ensemble des $z\in\mathbb{C}$ tels que $f(z)\in\mathbb{R}$
+\item Donner l'ensemble des $z\in\mathbb{C}$ tels que $|f(z)|=2$
+\end{enumerate}
+
+\section*{Exercice 6}
+
+Montrer que $|u+v|^2 +|u-v|^2 = 2(|u|^2 + |v|^2)$ 
+
+\section*{Exercice 7}
+
+Calculer, pour $\alpha\in\mathbb{R}$ avec $\cos(\alpha)\neq 0$, $A_n=\sum_{k=0}^n \frac{\cos(k\alpha)}{\cos^k(\alpha)}$ et $B_n=\sum_{k=0}^n \frac{\sin(k\alpha)}{\cos^k(\alpha)}$
+
+\section*{Exercice 8}
+
+Résoudre $z^2 -(4+2i)z + (11+10i)=0$
+
+\section*{Exercice 9}
+
+Donner une condition nécessaire et suffisante sur $(a,b)\in\mathbb{C}^2$ pour que les solutions de $z^2 +az+b=0$ soient imaginaires pures.
+
+
+
+\end{document}

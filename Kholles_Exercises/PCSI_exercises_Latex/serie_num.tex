@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+% -----------------------------------------------------------------
+\title{Série numérique}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Nature de la série de terme général $u_n=\sin(\frac{\pi n^2}{n+1})$ 
+\section*{Exercice 2}
+
+\begin{enumerate}
+\item Pour quelles valeurs de $a,b\in \mathbb{R}$ la série de terme général $u_n=\ln(n) + a\ln(n+1) +b\ln(n+2)$ est-elle convergente?
+\item Calculer la somme de cette série
+\end{enumerate}
+
+
+\section*{Exercice 3}
+
+Nature des séries suivantes :
+
+\begin{enumerate}
+
+\item $u_n=\frac{1}{n^{\frac{3}{4}}\ln^2(n)}$
+\item $u_n=(1+\frac{1}{\sqrt{n}})^{-n}$
+\item $u_n=\ln(\frac{2+\sin(\frac{1}{n})}{2-\sin(\frac{1}{n})})$
+\item $u_n=\frac{\ln^2(n)}{n^{\frac{5}{4}}}$
+
+\end{enumerate}
+
+\section*{Exercice 4}
+
+Nature de la série de terme général $u_n=\ln(1+\frac{(-1)^n}{n^{\alpha}}),\; \alpha>0$
+
+\section*{Exercice 5}
+
+Soit $u_n>0$. On pose $S_n=\sum_{k=0}^{n} u_k$. On suppose que $\sum_{n=0}^\infty u_n$ converge.
+
+Donner la nature des séries de termes généraux $\frac{u_n}{S_n}$ et $\frac{u_n}{S_n^2}$
+
+\section*{Exercice 6}
+
+\begin{enumerate}
+\item Par comparaison à une intégrale, donner un équivalent de $u_n=\sum_{k=1}^{n} \ln^2(k)$
+\item La série $ \sum_{n\ge2} \frac{1}{u_n}$ est-elle convergente? 
+\end{enumerate}
+
+\section*{Exercice 7}
+
+Nature de la série de terme général $u_n=\frac{n^{\alpha}\ln(n)^n}{n!} , \alpha\in \mathbb{R}$
+
+\section*{Exercice 8}
+
+Caluler $\lim\limits_{n \rightarrow +\infty} \frac{1}{n+1}+\cdots+\frac{1}{2n}=\lim\limits_{n \rightarrow +\infty} \sum_{k=1}^{n} \frac{1}{n+k}$
+
+\section*{Exercice 9}
+
+\begin{enumerate}
+\item Soit la série de terme général $u_n=\frac{1}{n\ln^{\alpha}(n)}, n\ge2$
+
+Montrer que $\sum u_n$ diverge si $\alpha\ge1$ et converge si $\alpha>1$
+
+\emph{Indication}: même démonstration que pour la série de Riemann
+
+\item En déduire la nature de la série $\sum_{n=2}^{\infty} \frac{(e - (1+\frac{1}{n•})^n)e^\frac{1}{n}}{\ln^2(n^2+n)}$
+
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+
+% -----------------------------------------------------------------
+\title{Continuité/Dérivation}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Déterminer les $f:\mathbb{R} \mapsto \mathbb{R}$ continues en 0 tel que $\forall x\in \mathbb{R}$, $f(2x)=f(x)$
+
+\section*{Exercice 2}
+
+Trouver les fonctions $f$ continues sur $\mathbb{R}/\forall(x,y)\in\mathbb{R}^2$, $f(x+y)=f(x)+f(y)$
+
+\section*{Exercice 3}
+
+Existe t'il des fonctions $f:\mathbb{R}\mapsto \mathbb{R}$ continues tel que $\forall x\in\mathbb{R}$, $f(-f(x))=x$
+
+\section*{Exercice 4}
+
+Soient $f,g :[a,b]\to\mathbb{R}$ continues et tel que $\forall x\in [a,b]$, $f(x)<g(x)$. Montrer qu'il existe $\alpha$ tel que $\forall x\in [a,b]$, $f(x)\leq g(x)-\alpha$
+
+\section*{Exercice 5}
+
+Soit $f\in C^0([0,1],\mathbb{R})$, et $(x_1,\cdots,x_n)\in [0,1]^n$. Montrer qu'il existe $c\in [0,1]$ tel que
+
+ $f(c)=\frac{f(x_1)+\cdots+f(x_n)}{n}$
+
+
+\end{document}

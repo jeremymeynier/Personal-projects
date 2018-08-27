@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+% -----------------------------------------------------------------
+\title{Intégrales impropres/ Intégrales à paramètres}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Soit $I_n= \int_0 ^{+\infty} \frac{\mathrm{d}x}{(1+x^4)^n}$. Prouver l'existence et donner la limite de $I_n$ 
+
+\section*{Exercice 2}
+
+Soit $I=\int_0^{+\infty} \frac{\sin(x)}{x}\mathrm{d}x$
+\begin{enumerate}
+\item $I$ est-elle convergente?
+\item $I$ est-elle absolument convergente?
+\end{enumerate}
+
+\section*{Exercice 3}
+
+Montrer que $\int_0^1 \frac{\ln(t)}{t-1}\mathrm{d}t = \sum_{k=1}^\infty \frac{1}{k^2}$
+
+\section*{Exercice 4}
+
+Soit $f: t\in ]0,1[ \mapsto \frac{1}{t^2} - \frac{1}{\arctan^2(t)}$
+
+\begin{enumerate}
+\item Montrer que $f$ est intégrable sur $]0,1]$
+\item Donner un équivalent de $\int_x^1 \frac{1}{\arctan^2(t)}\mathrm{d}t$ quand $x\to 0^{+}$
+\end{enumerate}
+
+\section*{Exercice 5}
+
+Soit $F(x) =\int_0^\infty \frac{\arctan(xt)}{t(1+t^2)}\mathrm{d}t$
+
+\begin{enumerate}
+\item Donner le domaine de définition de $F$
+\item Étudier la continuité de $F$
+\item Étudier le caractère $C^1$ de $F$
+\item Trouver $F$ à l'aide d'une décomposition en éléments simples
+\end{enumerate} 
+
+\section*{Exercice 6}
+
+On pose $f(x)=\int_x^\infty \frac{e^{-t}}{t}\mathrm{d}t$
+
+\begin{enumerate}
+\item Chercher $\lim_{x\to {+\infty}}$
+\item À l'aide d'une intégration par parties, donner un équivalent de $f$ en $+\infty$
+\item Déterminer un équivalent de $f(x)$ pour $x\to 0^{+}$
+\end{enumerate}
+
+\section*{Exercice 7}
+
+Soient $a,b \in \mathbb{R^{+*}}$. Montrer que $\int_0^1 \frac{t^{a-1}}{1+t^b}\mathrm{d}t = \sum_{n=0}^{+\infty} \frac{(-1)^n}{a+nb}$
+
+\section*{Exercice 8}
+
+Étudier l'intégrabilité de $f$ sur $I$ dans les cas suivants :
+
+\begin{enumerate}
+\item $ f(t) =\frac{1}{e^t +t^2e^{-t}}, \;I=\mathbb{R^{+*}}$
+\item $ f(t)=\frac{t^\alpha -1}{\ln(t)},\; I=]0,1[$
+\item $ f(t)=\frac{1}{\arccos(t)},\; I=[0,1[$
+\item $ f(t)=\frac{\sqrt{t}\sin(\frac{1}{t^2})}{\ln(1+t)},\; I=\mathbb{R^{+*}}$
+\end{enumerate}
+
+\section*{Exercice 9}
+
+Pour $x>0$ et $n\in\mathbb{N^*}$, on pose $I_n(x)=\displaystyle\int_0^{+\infty} \frac{\mathrm{d}t}{(x+t^2)^n}$
+
+\begin{enumerate}
+\item Calculer $I_1(x)$
+\item Montrer que $I_n\in C^1(]0,+\infty[)$
+\item Calculer $I'_n (x)$ en fonction de $I_{n+1}(x)$
+\item En déduire $I_n(x)$
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+% -----------------------------------------------------------------
+\title{Calcul différentiel}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Résoudre $ x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y} = \frac{y}{x}$
+
+\section*{Exercice 2}
+
+Résoudre $ \frac{\partial ^2 f}{\partial x^2 } - \frac{\partial ^2 f}{\partial y^2 } = 0$ à l'aide du changement de variable $u=x-y,\;  v=x+y$
+
+\section*{Exercice 3}
+
+Résoudre $ x^2\frac{\partial ^2 f}{\partial x^2} + 2xy\frac{\partial ^2 f}{\partial y\partial x} + y^2\frac{\partial ^2 f}{\partial y^2} = 0$ en posant $u=x, \; v=\frac{y}{x}$
+
+\section*{Exercice 4}
+
+Résoudre $ (x+y)\frac{\partial f}{\partial x} + (x-y)\frac{\partial f}{\partial y} = 0$ en posant $u = x^2-y^2-2xy, \; v=y$
+
+\end{document}

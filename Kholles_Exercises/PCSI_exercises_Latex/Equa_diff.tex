@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+
+% -----------------------------------------------------------------
+\title{Equations différentielles}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+Résoudre $(x-1)y'+xy=\sin(x)$
+
+\section*{Exercice 2}
+
+Soit $(E): \;4xy''+2y'-y=0$. Résoudre $(E)$ sur $\mathbb{R}^{+*}$ en utilisant le changement de varibale $t=\sqrt{x}$. (Chercher une solution de la forme $y(x)=z(\sqrt{x}))$
+
+\section*{Exercice 3}
+
+Résoudre $y''+3y'+2y=e^x$
+
+\section*{Exercice 4}
+
+Trouver les fonctions $f\in C^0(\mathbb{R},\mathbb{R})/\; \forall x\in \mathbb{R} \; f(x)+\int_0^x (x-t)f(t)\mathrm{d}t=1$
+
+\section*{Exercice 5}
+
+Soit $(E)= x^2y''(x)+y(x)=0$
+\begin{enumerate}
+\item Résoudre $(E)$ sur $\mathbb{R}^{+*}$ en posant $x=e^t$
+\item Résoudre $(E)$ sur $\mathbb{R}^{-*}$
+\item Donner les solutions sur $\mathbb{R}$
+\end{enumerate}
+
+\section*{Exercice 6}
+
+Résoudre $(1+x)y''-2y'+(1-x)y=0$ en posant $y(x)=e^xz(x)$
+
+\section*{Exercice 7}
+
+Résoudre sur $\mathbb{R}^{+} \; x\ln(x)y'=(1+3\ln(x))y$
+
+\end{document}

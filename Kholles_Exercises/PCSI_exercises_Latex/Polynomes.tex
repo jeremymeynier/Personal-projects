@@ -1,0 +1,81 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+
+% -----------------------------------------------------------------
+\title{Polynômes}
+\begin{document}
+\maketitle
+
+\section*{Exercice 1}
+
+\begin{enumerate}
+\item Montrer que $\exists!\; T_n\in\mathbb{R}[X] /\; T_n(\cos(\theta))=\cos(n\theta)$
+\item Montrer que $\forall x\in [-1,1], T_{n+2}=2XT_{n+1}-T_n$
+\item Donner le coefficient dominant et le degré de $T_n$
+\item Donner une équation différentielle du second ordre vérifiée par $T_n$
+\item Donner les racines de  $T_n$, puis le factoriser
+\item Montrer que les $(T_n)_{n\in\mathbb{N}}$ forment une famille orthogonale
+\end{enumerate}
+
+\section*{Exercice 2}
+
+Donner le reste de la division euclidienne de $(\cos(\theta)+X\sin(\theta))^n$ par $(X^2 +1)$
+
+\section*{Exercice 3}
+
+Trouver les polynômes $P\in\mathbb{R}[X]/\; P(X^2)=(X^2+1)P(X)$
+
+\section*{Exercice 4}
+
+Montrer que si $P\in\mathbb{R}[X]\backslash\{0\}$ vérifie $P(X^2)=P(X)P(X+1)$, ses racines sont parmi $\{0,1,-j,-j^2\}$. En déduire tous les polynômes solutions
+
+\section*{Exercice 5}
+
+Déterminer les polynômes $P\in\mathbb{R}[X]/\;(X+4)P(X)=XP(X+1)$
+
+\section*{Exercice 6}
+
+Déterminer les polynômes $P\in\mathbb{R}[X]/\;\forall n\in\mathbb{N} \int_n^{n+1} P(t)\mathrm{d}t = n^2 +1$
+
+\end{document}

@@ -1,0 +1,132 @@
+\documentclass[11pt]{article}
+\everymath{\displaystyle}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+\usepackage{algorithm} % Boxes/formatting around algorithms
+\usepackage[noend]{algpseudocode} % Algorithms
+\usepackage{hyperref}
+\usepackage{stmaryrd}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\def\Name{Jérémy Meynier}  % Your name
+\def\Login{} % nom du chapitre
+\def\Homework{N} % Number of Homework
+\def\Session{}
+
+
+
+
+\author{\Name \texttt{\Login}}
+\markboth{\Session\   \Name}{\Session\  \Name \texttt{\Login}}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=9in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+
+
+
+% -----------------------------------------------------------------
+\title{Autres (Applications/Dénombrement/Arithmétique)}
+\begin{document}
+\maketitle
+\part*{Applications}
+
+\section*{Exercice 1}
+
+Soient $E,F,G$ trois ensembles, $f:E\mapsto F$ et $g:F\mapsto G$
+
+\begin{enumerate}
+\item Montrer que si $g\circ f$ est surjective alors $g$ est surjective
+\item Montrer que si $g\circ f$ est injective alors $f$ est injective
+\end{enumerate}
+
+\section*{Exercice 2}
+
+Soit $E$ un ensemble et $p:E\mapsto E$/ $p\circ p=p$
+\begin{enumerate}
+\item On suppose $p$ injective. Montrer que $p = id_E$
+\item On suppose $p$ surjective. Montrer que $p = id_E$
+\end{enumerate}
+
+\section*{Exercice 3}
+
+Soient $E$ et $F$ des ensembles, $f:E\mapsto F$ et $g:F\mapsto E$. On suppose que $g\circ f$ est bijective.
+Montrer que $f$ est injective et que $g$ est surjective.
+
+\section*{Exercice 4}
+
+Soient $E,F,G$ des ensembles, $f:E\mapsto F$ et $g:F\mapsto G$.
+\begin{enumerate}
+\item On suppose $g\circ f$ injective et $f$ surjective. Montrer que $g$ est injective.
+\item On suppose $g\circ f$ surjective et $g$ injective. Montrer que $f$ est surjective.
+
+\end{enumerate}
+
+\section*{Exercice 5}
+
+Soit $E$ un ensemble et $f:E\mapsto E$/ $f\circ f\circ f=f$. Montrer que $f$ est injective si et seulement si $f$ est surjective.
+
+\part*{Arithmétique}
+
+\section*{Exercice 1}
+
+Soit $p\geq 5$ un nombre premier. Montrer que $p^2 -1$ est divisible par 24.
+
+\section*{Exercice 2}
+
+Trouver le dernier chiffre de l'écriture décimale de $1997^{2001^{2003}}$
+
+\section*{Exercice 3}
+
+Trouver les deux derniers chiffres de l'écriture décimale de $2^{2018}$
+
+\section*{Exercice 4}
+
+Montrer, si $n\in\mathbb{N}$, que $4^n +15n -1\equiv 0[9]$
+
+\section*{Exercice 5}
+
+Montrer que, $\forall n\in\mathbb{N}$, $6|5n^3+n$
+
+\section*{Exercice 6}
+
+Montrer que, $\forall n\in\mathbb{N}$, $42|n^{13}-n$
+
+\part*{Dénombrement}
+
+\section*{Exercice 1}
+
+Montrer avec un argument combinatoire que $\sum_{k=0}^r \dbinom{n}{k}\dbinom{m}{r-k}=\dbinom{n+m}{r}$
+
+\section*{Exercice 2}
+
+Montrer avec un argument combinatoire que $k\dbinom{n}{k}=n\dbinom{n-1}{k-1}$
+
+\section*{Exercice 3}
+
+Montrer avec un argument combinatoire que $\dbinom{n}{k}=\dbinom{n-1}{k-1}+\dbinom{n-1}{k}$
+
+\section*{Exercice 4}
+
+
+
+	
+
+\end{document}
